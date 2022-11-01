@@ -49,7 +49,11 @@ class DisplayResults {
       total = rolls.reduce((val, roll) => val + roll.value, 0);
       let modifier = data.reduce((val, roll) => val + roll.modifier, 0);
       total += modifier;
-      modifierString = ` + <span style="color: purple">(${modifier})</span>`;
+      if (modifier > 0) {
+        modifierString = ` + <span style="color: green">+${modifier}</span>`;
+      } else if (modifier < 0) {
+        modifierString = ` + <span style="color: purple">${modifier}</span>`;
+      }
     }
 
     total = isNaN(total) ? '...' : total;
