@@ -50,9 +50,9 @@ class DisplayResults {
       let modifier = data.reduce((val, roll) => val + roll.modifier, 0);
       total += modifier;
       if (modifier > 0) {
-        modifierString = ` + <span class="mod-positive">+${modifier}</span>`;
+        modifierString = ` <span class="mod-positive">+${modifier}</span>`;
       } else if (modifier < 0) {
-        modifierString = ` + <span class="mod-negative">${modifier}</span>`;
+        modifierString = ` <span class="mod-negative">${modifier}</span>`;
       }
     }
 
