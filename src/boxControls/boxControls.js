@@ -9,6 +9,8 @@ class BoxControls {
       autoPlace: true
     })
     this.gui.domElement.parentElement.style.zIndex = 2
+    dat.GUI.TEXT_CLOSED = options.closeControlsString ?? dat.GUI.TEXT_CLOSED;
+    dat.GUI.TEXT_OPEN = options.openControlsString ?? dat.GUI.TEXT_OPEN;
     this.config = {
       enableShadows: true,
       shadowTransparency: .8,
